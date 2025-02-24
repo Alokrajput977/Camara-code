@@ -1,0 +1,196 @@
+/* Reset defaults */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Base font and background for light mode */
+  .app {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f6f9fc, #e9eff5);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.5s, color 0.5s;
+  }
+  
+  /* Dark mode style */
+  .app.dark-mode {
+    background: linear-gradient(135deg, #1e1e1e, #121212);
+    color: #e0e0e0;
+  }
+  
+  /* Header styling */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: linear-gradient(135deg, #6c63ff, #8a80ff);
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header h1 {
+    font-size: 28px;
+  }
+  
+  /* Dark mode header adjustments */
+  .app.dark-mode .header {
+    background: linear-gradient(135deg, #444, #333);
+  }
+  
+  /* Toggle mode button */
+  .toggle-mode-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .toggle-mode-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Container centering */
+  .container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Card design for the form */
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    padding: 40px 50px;
+    width: 100%;
+    max-width: 450px;
+    transition: background 0.5s, box-shadow 0.5s;
+  }
+  
+  .app.dark-mode .card {
+    background: #1e1e1e;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Card heading */
+  .card h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    text-align: center;
+    color: inherit;
+  }
+  
+  /* Form group spacing */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Input fields styling */
+  .input-field {
+    width: 100%;
+    padding: 14px 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background: transparent;
+    color: inherit;
+  }
+  
+  .input-field::placeholder {
+    color: #aaa;
+  }
+  
+  .input-field:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 10px rgba(108, 99, 255, 0.3);
+    outline: none;
+  }
+  
+  /* Button group */
+  .button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .btn {
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  /* Primary button style */
+  .btn.primary {
+    background: #6c63ff;
+    color: #fff;
+  }
+  
+  .btn.primary:hover {
+    transform: translateY(-2px);
+    background: #5a54e6;
+  }
+  
+  /* Secondary button style */
+  .btn.secondary {
+    background: #fff;
+    color: #6c63ff;
+    border: 2px solid #6c63ff;
+  }
+  
+  .btn.secondary:hover {
+    transform: translateY(-2px);
+    background: #f0f0ff;
+  }
+  
+  /* Dark mode adjustments for secondary button */
+  .app.dark-mode .btn.secondary {
+    background: #333;
+    color: #6c63ff;
+    border: 2px solid #6c63ff;
+  }
+  
+  .app.dark-mode .btn.secondary:hover {
+    background: #444;
+  }
+  
+  /* Footer styling */
+  .footer {
+    text-align: center;
+    padding: 15px 20px;
+    background: linear-gradient(135deg, #6c63ff, #8a80ff);
+    color: #fff;
+    font-size: 14px;
+  }
+  
+  .app.dark-mode .footer {
+    background: linear-gradient(135deg, #444, #333);
+  }
+  
+  /* Responsive adjustments */
+  @media (min-width: 768px) {
+    .button-group {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+    .btn {
+      width: 48%;
+    }
+  }
+  
